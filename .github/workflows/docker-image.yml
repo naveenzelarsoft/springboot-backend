@@ -24,6 +24,6 @@ jobs:
       run: |
            cd backend-springboot
            docker build . --file Dockerfile -t ${{secrets.DOCKER_USER}}/reactbackend:latest
-           
+            
     - name: docker push
       run: docker push ${{secrets.DOCKER_USER}}/reactbackend:latest
